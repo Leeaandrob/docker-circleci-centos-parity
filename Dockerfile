@@ -15,5 +15,3 @@ RUN tar xzvf openssl-1.1.0.tar.gz && cd openssl-1.1.0 && ./config -Wl,--enable-n
 RUN ln -s /usr/local/lib64/libssl.so.1.1 /usr/lib64/
 RUN ln -s /usr/local/lib64/libcrypto.so.1.1 /usr/lib64/
 RUN ln -s /usr/local/bin/openssl /usr/bin/
-RUN openssl version
-RUN bash <(curl https://get.parity.io -Lk)
