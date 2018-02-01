@@ -19,4 +19,9 @@ RUN ln -s /usr/local/lib64/libcrypto.so.1.1 /usr/lib64/
 RUN rm /usr/bin/openssl
 RUN ln -s /usr/local/ssl/bin/openssl /usr/bin/openssl
 RUN rpm -Uvh http://d1h4xl4cr1h0mo.cloudfront.net/v1.9.0/x86_64-unknown-centos-gnu/parity_1.9.0_x86_64.rpm
-RUN parity --version
+RUN wget http://nodejs.org/dist/v9.4.0/node-v9.4.0-linux-x64.tar.gz
+RUN tar --strip-components 1 -xzvf node-v* -C /usr/local
+RUN ln -s /usr/local/bin/node /usr/bin/node
+RUN ln -s /usr/local/lib/node /usr/lib/node
+RUN ln -s /usr/local/bin/npm /usr/bin/npm
+RUN ln -s /usr/local/bin/node-waf /usr/bin/node-waf
