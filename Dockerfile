@@ -25,3 +25,6 @@ RUN ln -s /usr/local/bin/node /usr/bin/node
 RUN ln -s /usr/local/lib/node /usr/lib/node
 RUN ln -s /usr/local/bin/npm /usr/bin/npm
 RUN ln -s /usr/local/bin/node-waf /usr/bin/node-waf
+RUN wget https://dl.yarnpkg.com/rpm/yarn.repo -O /etc/yum.repos.d/yarn.repo
+RUN curl --silent --location https://rpm.nodesource.com/setup_6.x | bash -
+RUN yum -y install yarn
